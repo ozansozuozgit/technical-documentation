@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  overflow-y: hidden; /*remove scroll to make navbar fixed*/
+  margin: 0;
+  background-color: rgb(255, 255, 255);
+  font-family: "Hind Siliguri", sans-serif;
+}
+
+#main-doc {
+  height: 100vh;
+  flex-grow: 1; /*ensures that the container will take up the full height of the parent container*/
+  overflow-y: auto; /*adds scroll to main document*/
+  padding: 20px 20px 50px 30px;
+}
+
+#main-doc header {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+#main-doc p,
+#main-doc ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-left: 30px;
+}
+
+#navbar {
+  display: flex;
+  flex-direction: column;
+  width: 15%;
+  min-width: 15%;
+  padding-top: 20px;
+  border-right: 2px solid rgba(177, 166, 166, 0.582);
+}
+
+#navbar header {
+  text-align: center;
+  font-size: 1.3em;
+}
+
+#nav-list {
+  padding-left: 0;
+}
+
+#nav-list > li {
+  color: black;
+  list-style-type: none;
+  font-size: 1.2em;
+  margin-left: 0;
+  padding: 5px 5px 5px 5px;
+  border-top: 1.5px solid rgb(177, 166, 166);
+}
+
+#nav-list > li:last-child {
+  border-bottom: 1.5px solid rgb(177, 166, 166);
+}
+
+.nav-link {
+  text-decoration: none;
+  color: black;
+  width: 100%;
+  display: inline-block;
+}
+
+#Reference a {
+  color: blue;
+}
+
+#Reference a:hover {
+  color: rgba(0, 0, 255, 0.61);
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover {
+  color: rgba(0, 0, 0, 0.473);
+}
+
+pre {
+  background-color: rgba(158, 152, 152, 0.425);
+  border-radius: 2px;
+}
+
+/* Media Queries */
+
+@media (max-width: 800px) {
+  #nav-list {
+    /* margin: 0; */
+    padding: 0;
+  }
+}
